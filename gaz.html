@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gaz Dashboard</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet"  href="water.css" media="all" />
+        
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js">//Telechargement de la bibliothèque</script>
+        
+       
+
+    </head>
+
+    <script></script>
+
+    <body>
+
+        <div class="container">
+            <div class= "elec1" >
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+
+
+            <div class= "elec2" >
+                <canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+
+        <script>
+            Chart.defaults.global.title.display = true;
+            Chart.defaults.global.title.text = "EUR/GJ_GCV/PAYS EN EURO DE LA CONSOMMATION MOYENNE EN GAZ SUR 13 ANS";
+
+        </script>
+
+
+        <script>
+            //SCRIPT FOR THE FIRST
+           var ctx = document.getElementById('myChart').getContext('2d');
+           var chart = new Chart(ctx, {
+           // The type of chart we want to create
+           type: 'bar',
+
+           // The data for our dataset
+           data: {
+                labels: ["AT",	"BA",	"BE",	"BG",	"CZ",	"DE",	"DK",	"EA",	"EE",	"EL",	"ES",	"EU27_2020",	"FR",	"GE",	"HR",	"HU",	"IE",	"IT",	"LI",	"LT",	"LU",	"LV",	"MD",	"MK",	"NL",	"PL",	"PT",	"RO",	"RS",	"SE",	"SI",	"SK",	"TR",	"UA",	"UK"],
+                datasets: [{
+                label: "Unité en GJ_GCV",
+                backgroundColor: 'rgb(104, 111, 140)',
+                borderColor: 'rgb(104, 111, 140)',
+                data: [18.58678462,	10.51645385,	15.62024,	11.55094615,	15.25747231,	16.9249,	24.00977846,	18.17129385,	11.70342923,	11.02584769,	18.06003385,	17.29220615,	17.53720154,	1.121663077,	10.71404154,	10.94444,	16.96847231,	19.91184308,	12.84594308,	11.82886615,	12.94328615,	11.45071231,	4.199436923,	5.037072308,	21.63559846,	11.94449538,	20.8423,	7.559107692,	6.854495385,	29.96738923,	16.83685692,	12.54326154,	8.173906154,	2.516918462,	13.43264615],
+            }]
+            },
+            // Configuration options go here
+            options: {
+
+
+            }
+
+            });
+
+        </script>
+
+
+
+        <script>
+            //SCRIPT POUR DEUXIEME
+           var ctx = document.getElementById('myChart2').getContext('2d');
+           var chart2 = new Chart(ctx, {
+           // The type of chart we want to create
+           type: 'bar',
+
+           // The data for our dataset
+           data: {
+                labels: ["AT",	"BA",	"BE",	"BG",	"CZ",	"DE",	"DK",	"EA",	"EE",	"EL",	"ES",	"EU27_2020",	"FI",	"FR",	"GE",	"HR",	"HU",	"IE",	"IT",	"LI",	"LT",	"LU",	"LV",	"MD",	"MK",	"NL",	"PL",	"PT",	"RO",	"RS",	"SE",	"SI",	"SK",	"TR",	"UA",	"UK"],
+                datasets: [{
+                label: "Unité en GJ_GCV",
+                backgroundColor: 'rgb(104, 111, 140)',
+                borderColor: 'rgb(104, 111, 140)',
+                data: [8.026270769,	9.277203077,	7.270032308,	7.55548,	7.571836923,	8.800827692,	6.85838,	8.350044615,	7.617603077,	4.298461538,	8.353681538,	8.254547692,	9.081393846,	8.759013846,	1.670390769,	9.031976923,	8.385812308,	8.651710769,	8.33112,	6.670955385,	8.426463077,	10.21739538,	8.123304615,	3.701584615,	7.198024615,	6.806056923,	8.491995385,	8.992090769,	4.261530769,	6.651663077,	9.853792308,	9.431004615,	8.782738462,	6.210935385,2.163346154,	7.453886154
+                ],
+            }]
+            },
+            // Configuration options go here
+            options: {
+
+
+            }
+
+            });
+
+        </script>       
+
+
+    </body>
+
+
+
+</html>

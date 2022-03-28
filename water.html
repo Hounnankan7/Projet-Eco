@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Water Dashboard</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet"  href="water.css" media="all" />
+        
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js">//Telechargement de la bibliothèque</script>
+        
+       
+
+    </head>
+
+    <script></script>
+
+    <body>
+
+        <div class="container">
+            <div class= "elec1" >
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+
+
+            <div class= "elec2" >
+                <canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+
+        <script>
+            Chart.defaults.global.title.display = true;
+            Chart.defaults.global.title.text = "EUR/M3/CLV10/PAYS EN EURO DE LA CONSOMMATION MOYENNE EN EAU SUR 13 ANS";
+
+        </script>
+
+
+        <script>
+            //SCRIPT FOR THE FIRST
+           var ctx = document.getElementById('myChart').getContext('2d');
+           var chart = new Chart(ctx, {
+           // The type of chart we want to create
+           type: 'bar',
+
+           // The data for our dataset
+           data: {
+                labels: ["BE",	"BG",	"CH",	"CY",	"CZ",	"DE",	"DK",	"EE",	"EL",	"ES",	"FI",	"FR",	"HR",	"HU",	"IE",	"IS",	"IT",	"LT",	"LU",	"LV",	"MK",	"MT",	"NL",	"PL",	"PT",	"RO",	"RS",	"SE",	"SI",	"SK",	"TR",	"UK",	"XK"
+                ],
+                datasets: [{
+                label: "Unité en EUR/M3/CLV10",
+                backgroundColor: 'rgb(38, 196, 236)',
+                borderColor: 'rgb(38, 196, 236)',
+                data: [40.03076923,	5.5,	18.04615385,	66.95384615,	75.06923077,	23.1,	215.6769231,	6.753846154,	11.38461538,	19.41538462,	0,	50.94615385,	50.16153846,	17.79230769,	16.71538462,	0,	0,	56.96153846,	603.6923077,	83.58461538,	1.669230769,	149.2846154,	54.37692308,	27.85384615,	2.892307692,	16.85384615,	5.415384615,	23.76923077,	31.9,	96.29230769,	6.353846154,	92.8,	9.638461538
+                ],
+            }]
+            },
+            // Configuration options go here
+            options: {
+
+
+            }
+
+            });
+
+        </script>
+
+
+
+        <script>
+            //SCRIPT POUR DEUXIEME
+           var ctx = document.getElementById('myChart2').getContext('2d');
+           var chart2 = new Chart(ctx, {
+           // The type of chart we want to create
+           type: 'bar',
+
+           // The data for our dataset
+           data: {
+                labels: ["AL","BE",	"BG",	"CH",	"CY",	"CZ",	"DE",	"DK",	"EE",	"EL",	"ES",	"FI",	"FR",	"HR",	"HU",	"IE",	"IS",	"IT",	"LT",	"LU",	"LV",	"MK",	"MT",	"NL",	"PL",	"PT",	"RO",	"RS",	"SE",	"SI",	"SK",	"TR",	"UK"],
+                datasets: [{
+                label: "Unité en PPS/M3",
+                backgroundColor: 'rgb(38, 196, 236)',
+                borderColor: 'rgb(38, 196, 236)',
+                data: [3.961538462,	38.1,	12.67692308,	13.9,	74.76153846,	113.3692308,	23.14615385,	167.4538462,	10.73846154,	13.08461538,	21.19230769,	0,	47.42307692,	77.96923077,	30.70769231,	14.53846154,	0,	0,	104.1538462,	541.9538462,	140.2384615,	4.330769231,	204.4230769,	50.89230769,	48.78461538,	3.784615385,	36.87692308,	12.68461538,	20.00769231,	40.62307692,	144.2307692,	10.80769231,	87.50769231],
+            }]
+            },
+            // Configuration options go here
+            options: {
+
+
+            }
+
+            });
+
+        </script>       
+
+
+    </body>
+
+
+
+</html>

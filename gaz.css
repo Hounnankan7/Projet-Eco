@@ -1,0 +1,17 @@
+.container{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+}
+
+
+.elec1{
+    width: 500px;
+    height: 170px;
+    
+}
+
+.elec2{
+    width: 500px;
+    height: 170px;
+    
+}

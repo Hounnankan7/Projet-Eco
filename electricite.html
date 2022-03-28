@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Electricity Dashboard</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet"  href="electricite.css" media="all" />
+        
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js">//Telechargement de la bibliothèque</script>
+        
+       
+
+    </head>
+
+    <script></script>
+
+    <body>
+
+        <div class="container">
+            <div class= "elec1" >
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+
+
+            <div class= "elec2" >
+                <canvas id="myChart2" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+
+        <script>
+            Chart.defaults.global.title.display = true;
+            Chart.defaults.global.title.text = "PRIX UNITAIRE/PAYS EN EURO DE LA CONSOMMATION MOYENNE ELECTRIQUE SUR 13 ANS";
+
+        </script>
+
+
+        <script>
+            //SCRIPT FOR THE FIRST
+           var ctx = document.getElementById('myChart').getContext('2d');
+           var chart = new Chart(ctx, {
+           // The type of chart we want to create
+           type: 'bar',
+
+           // The data for our dataset
+           data: {
+                labels: ["AL",	"AT",	"BA",	"BE",	"BG",	"CY",	"CZ",	"DE",	"DK",	"EA",	"EE",	"EL",	"ES",	"EU27_2020",	"FI",	"FR",	"GE",	"HR",	"HU",	"IE",	"IS",	"IT",	"LI",	"LT",	"LU",	"LV",	"MD",	"ME",	"MK",	"MT",	"NL",	"NO",	"PL",	"PT",	"RO",	"RS",	"SE",	"SI", "SK",	"TR",	"UA",	"UK",	"XK"],
+                datasets: [{
+                label: "EURO/KWH pour une MSHH",
+                backgroundColor: 'rgb(255, 127, 0)',
+                borderColor: 'rgb(255, 127, 0)',
+                data: [0.061746154, 0.190637308, 0.071473077, 0.22744, 0.086453462, 0.197081154, 0.149171923, 0.267931154, 0.280427308, 0.198192692, 0.113150769, 0.146360769, 0.203597308, 0.18953, 0.147846154, 0.150150385, 0.018377308, 0.119564231, 0.123191154, 0.213019615, 0.093748846, 0.209362308, 0.104463462, 0.116623846, 0.16627, 0.133230769, 0.047352308, 0.077167692, 0.051405385, 0.138210769, 0.169265, 0.164509615, 0.132525, 0.193584615, 0.116720385, 0.041986923, 0.182485385, 0.14606, 0.149585385, 0.111309615, 0.013739167, 0.172700385, 0.038790385],
+            }]
+            },
+            // Configuration options go here
+            options: {
+
+
+            }
+
+            });
+
+        </script>
+
+
+
+        <script>
+            //SCRIPT POUR DEUXIEME
+           var ctx = document.getElementById('myChart2').getContext('2d');
+           var chart2 = new Chart(ctx, {
+           // The type of chart we want to create
+           type: 'bar',
+
+           // The data for our dataset
+           data: {
+                labels: ["AL",	"AT",	"BA",	"BE",	"BG",	"CY",	"CZ",	"DE",	"DK",	"EA",	"EE",	"EL",	"ES",	"EU27_2020",	"FI",	"FR",	"GE",	"HR",	"HU",	"IE",	"IS",	"IT",	"LI",	"LT",	"LU",	"LV",	"MD",	"ME",	"MK",	"MT",	"NL",	"NO",	"PL",	"PT",	"RO",	"RS",	"SE",	"SI", "SK",	"TR",	"UA",	"UK",	"XK"],
+                datasets: [{
+                label: "EURO/KWH pour une MSIND",
+                backgroundColor: 'rgb(255, 127, 0)',
+                borderColor: 'rgb(255, 127, 0)',
+                data: [0.008,	0.078330385,	0.055767692,	0.084117308,	0.071767308,	0.136648462,	0.080981538,	0.080962692,	0.060207692,	0.083078846,	0.066786538,	0.087654231,	0.091576923,	0.081356154,	0.061413462,	0.071888077,	0.013582692,	0.083925385,	0.076225769,	0.116398077,	0.017215385,	0.078096923,	0.061130769,	0.084691154,	0.08388,	0.086073462,	0.039125,	0.058931538,	0.041156154,	0.147436923,	0.071069231,	0.065530385,	0.077453846,	0.08693,	0.074388462,	0.040713846,	0.067433462,	0.075714231,	0.102545769,	0.071114615,	0.015801923,	0.099982692,	0.043148462
+            ],
+            }]
+            },
+            // Configuration options go here
+            options: {
+
+
+            }
+
+            });
+
+        </script>       
+
+
+    </body>
+
+
+
+</html>
